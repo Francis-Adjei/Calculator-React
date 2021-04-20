@@ -1,0 +1,258 @@
+.calculator {
+  position: fixed;
+  min-width: 320px;
+  min-height: 568px;
+  max-width: 414px;
+  max-height: 823px;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .calculator {
+    left: 50%;
+  }
+
+}
+
+.display-toolbar {
+  position: fixed;
+  width: 100%;
+  height: 36%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  -ms-flex-flow: column;
+  justify-content: space-between;
+}
+
+.buttons {
+  position: fixed;
+  height: 64%;
+  left: 0;
+  top: 36%;
+  background-color: #fff;
+  padding: 0.25rem;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.history {
+  position: fixed;
+  width: calc(99.2%);
+  height: calc(64.9%);
+  top: 36%;
+  background-color: #DDDDDD;
+  border: 1px solid #c6c6c6;
+  opacity: 1;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  z-index: 101;
+}
+
+.history.hidden {
+  z-index: 99;
+  opacity: 0;
+}
+
+.buttons button {
+  display: block;
+  -webkit-box-flex: 1;
+  flex: 1 1 calc(25% - 0.5rem);
+  font-size: 1.1rem;
+  line-height: 54px;
+  outline: none;
+  border: 1px solid #c6c6c6;
+  cursor: pointer;
+  color: #444;
+  background-color: #EBEBEB;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+}
+
+#divide,
+#subtract,
+#add {
+  font-size: 30px;
+}
+
+.buttons button:hover,
+#one:hover,
+#two:hover,
+#three:hover,
+#four:hover,
+#five:hover,
+#six:hover,
+#seven:hover,
+#eight:hover,
+#nine:hover,
+#zero:hover {
+  background-color: #B8B8B5;
+}
+
+.buttons button:active,
+#one:active,
+#two:active,
+#three:active,
+#four:active,
+#five:active,
+#six:active,
+#seven:active,
+#eight:active,
+#nine:active,
+#zero:active {
+  background-color: #8C8C89;
+}
+
+.buttons button:focus,
+#one:focus,
+#two:focus,
+#three:focus,
+#four:focus,
+#five:focus,
+#six:focus,
+#seven:focus,
+#eight:focus,
+#nine:focus,
+#zero:focus {
+  outline: none;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#zero {
+  font-size: 1.3rem;
+  background-color: #FAFAFA;
+  font-weight: bold;
+}
+
+#decimal {
+  font-weight: bold;  
+}
+
+.display {
+  display: flex;
+  flex-flow: column;
+  -ms-flex-flow: column;
+  justify-content: space-between;
+  padding: 15px 15px 0 15px;
+  background-color: #fff;
+  flex-grow: 1;
+}
+
+.display-formula,
+.display-input {
+  resize: none;
+  font-family: Nunito Sans, Helvetica, Arial, sans-serif;
+  border: none;
+  outline: none;
+  text-align: right;
+  background-color: inherit;
+}
+
+.display-formula {
+  flex-grow: 1;
+  font-size: 2rem;
+}
+
+.display-input {
+  flex-shrink: 0;
+  font-size: 1.75rem;
+  color: #888;
+  white-space: nowrap;
+  padding-bottom: 15px;
+}
+
+.toolbar {
+  background-color: #fff;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.toolbar-item:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+
+#view-history {
+  -webkit-transition: all 0.35s ease-out;
+  -moz-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+}
+
+
+.history-list {
+  height: 100%;
+}
+
+.history-item {
+  text-align: right;
+}
+
+.history-item hr {
+  color: #aaa;
+  size: 1px;
+}
+
+.history-item-formula {
+  color: #888;
+  padding: 15px 15px 0 15px;
+}
+
+.history-item-result {
+  color: blueviolet;
+  padding: 0 15px;
+}
+
+.history-item-result:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+
+.bottom-btns {
+  position: absolute;
+  text-align: right;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-btns button {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 10px 13px 9px 15px;
+  outline: none;
+  border: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  -moz-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.bottom-btns button:hover {
+  cursor: pointer;
+  background-color: rgb(170, 170, 170);
+}
+
+#calculate {
+  border-left: 1px solid #ddd;
+}
